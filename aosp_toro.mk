@@ -13,6 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-$(call inherit-product, device/samsung/toro/full_toro.mk)
+$(call inherit-product, device/samsung/toro/omni_toro.mk)
 
 PRODUCT_NAME := aosp_toro
