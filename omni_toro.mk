@@ -18,7 +18,8 @@ PRODUCT_RELEASE_NAME := GN-CDMA
 
 # Do this before base_telephony is included since the first instance takes precedence
 PRODUCT_COPY_FILES += \
-    device/samsung/toro/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
+    device/samsung/toro/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
