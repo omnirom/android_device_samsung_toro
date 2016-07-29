@@ -13,34 +13,34 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Release name
-PRODUCT_RELEASE_NAME := GN-CDMA
+# Exclude Live Wallpapers
+TARGET_EXCLUDE_LIVEWALLPAPERS := true
 
-# Do this before base_telephony is included since the first instance takes precedence
-PRODUCT_COPY_FILES += \
-    device/samsung/toro/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
+# Use the AOSP browser
+TARGET_USES_AOSP_BROWSER := true
+
+# Bootanimation
+TARGET_BOOTANIMATION_SIZE := 720x407
 
 # Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Inherit from our omni product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Pull in CDMA-specific stuff such as APNs
 $(call inherit-product, vendor/omni/config/cdma.mk)
 
+# Inherit from our omni product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+
 # Inherit device configuration
 $(call inherit-product, device/samsung/toro/device.mk)
 
-PRODUCT_GMS_CLIENTID_BASE := android-verizon
-
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := toro
 PRODUCT_NAME := omni_toro
-PRODUCT_BRAND := google
+PRODUCT_DEVICE := toro
+PRODUCT_BRAND := Google
 PRODUCT_MODEL := Galaxy Nexus
-PRODUCT_MANUFACTURER := samsung
+PRODUCT_MANUFACTURER := Samsung
+PRODUCT_RESTRICT_VENDOR_FILES := false
 
 #Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
