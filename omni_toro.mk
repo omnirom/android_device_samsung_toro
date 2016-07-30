@@ -22,6 +22,10 @@ TARGET_USES_AOSP_BROWSER := true
 # Bootanimation
 TARGET_BOOTANIMATION_SIZE := 720x407
 
+# Data and MMS do not work with the stock APN's. Use our own instead.
+PRODUCT_COPY_FILES += \
+	device/samsung/toro/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
