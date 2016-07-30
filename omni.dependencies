@@ -29,4 +29,10 @@
     "target_path": "prebuilts/gcc/darwin-x86/arm/arm-eabi-4.7",
     "revision": "android-6.0"
   },
+  {
+    "remote": "omnirom",
+    "repository": "android_packages_apps_Nfc",
+    "target_path": "packages/apps/Nfc-nxp",
+    "revision": "android-6.0-nxp"
+  }
 ]
