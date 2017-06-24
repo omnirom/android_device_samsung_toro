@@ -20,7 +20,7 @@ TARGET_EXCLUDE_LIVEWALLPAPERS := true
 TARGET_USES_AOSP_BROWSER := true
 
 # Bootanimation
-TARGET_BOOTANIMATION_SIZE := 720x407
+TARGET_BOOTANIMATION_SIZE := 320x181
 
 # Data and MMS do not work with the stock APN's. Use our own instead.
 PRODUCT_COPY_FILES += \
