@@ -1,4 +1,0 @@
-etc/permissions/com.vzw.hardware.ehrpd.xml
-etc/permissions/com.vzw.hardware.lte.xml
-lib/lib_gsd4t.so
-vendor/lib/libsec-ril_lte.so
