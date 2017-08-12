@@ -18,14 +18,4 @@
 #
 # Everything in this directory will become public
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/toro/overlay
-
-PRODUCT_COPY_FILES += \
-	device/samsung/toro/bcmdhd.cal:system/etc/wifi/bcmdhd.cal \
-	frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.vc_call_vol_steps=7
-
 $(call inherit-product, device/samsung/tuna/device.mk)
-$(call inherit-product-if-exists, vendor/samsung/toro/toro-vendor.mk)

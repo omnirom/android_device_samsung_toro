@@ -1,2 +1,0 @@
-allow rild proc_net:file write;
-allow rild sysfs:file write;
